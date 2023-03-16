@@ -19,19 +19,15 @@ public class BbsDAO {
 
 		BbsVO bag = null;
 		try {
-			// 1.오라클 11g와 연결한 부품 설정
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			System.out.println("1.mySQL과 자바 연결할 부품 설정 성공.");
+			System.out.println("1.MySQL과 자바 연결할 부품 설정 성공.");
 			Locale.setDefault(Locale.US); // 맥 locale에러나신 분들만!!!
-
-			// 2.오라클 11g에 연결해보자.(java --- oracle)
-			// String url = "jdbc:mysql://localhost:3306/multi";
+	
 			String url = "jdbc:mysql://localhost:3306/multi?serverTimezone=UTC";
 			String user = "root";
-			String password = "1234";
+			String password = "Wjdekdud0115^^";
 			Connection con = DriverManager.getConnection(url, user, password); // Connection
 			// String data = JOptionPane.showInputDialog("이름입력"); //String, 임아무개
-			System.out.println("2. mySQL 연결 성공.");
 			// 컨트롤 + 쉬프트 + f : 코드 자동 정리!
 
 			String sql = "select * from bbs";
