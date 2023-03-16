@@ -3,7 +3,7 @@
 <head>
 <meta charset="EUC-KR">
 <!-- no, title, content, writer 게시판 글쓰기 -->
-<title>게시판 글 삭제 페이지</title>
+<title>게시판 글 검색(상세) 페이지</title>
 
 <!-- <script type="text/javascript">
 	alert('게시판 글 삭제 페이지입니다. 반갑습니다!')
@@ -34,7 +34,7 @@ button {
 </style>
 </head>
 <body>
-	<h3>게시판 글 삭제 페이지</h3>
+	<h3>게시판 글 삭제(상세) 페이지</h3>
 	<hr color="red">
 	<a href="index.html">
 		<button id="b1">첫페이지로</button>
@@ -42,19 +42,31 @@ button {
 	<a href="bbs.html">
 		<button id="b1">게시판 정보 페이지로</button>
 	</a>
+	<hr>
+	<!--a태그는 무조건 get방식 요청 -->
+	<a href="http://localhost:8898/web00/bbsOne.jsp?no=40">
+		<button style="background: pink">40번 게시물</button>
+	</a>
+	<a href="http://localhost:8898/web00/bbsOne.jsp?no=41">
+		<button style="background: pink">41번 게시물</button>
+	</a>
+	<a href="http://localhost:8898/web00/bbsOne.jsp?no=42">
+		<button style="background: pink">42번 게시물</button>
+	</a>
+	<hr>
 	<!-- 태그(tag) : html의 주요 구성요소(Element) -->
-	<form action="bbsDelete.jsp" method='get'>
+	<form action="bbsOne.jsp" method='get'>
 		<!-- get방식 : 주소와 함께 전송 -->
 		<!-- http://localhost:8888/web00/bbsDelete.jsp?no=1&title=1&content=1&writer=1 -->
 		<!-- http의 header(요청주소+Get방식으로 넘어가는 데이터) -->
 		<table border="1">
 			<tr>
-				<td class="t1">삭제할 번호 :</td>
+				<td class="t1">검색할 번호 :</td>
 				<td><input name='no'></td>
 			</tr>
 			<tr>
 				<td colspan="2" class="t1"><button type="submit" id="b2">
-						게시판 글 삭제 데이터 전송</button></td>
+						게시판 글 검색 no 데이터 전송</button></td>
 			</tr>
 		</table>
 		<!-- 입력한 값들이 서버(톰킷)으로 전달 될 때는 form태그 안에 있어야 함. -->

@@ -1,71 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>È¸¿ø°Ë»ö(ÇÑ ¸í) ÆäÀÌÁö</title>
-
-<script type="text/javascript">
-	alert('È¸¿ø°Ë»ö(ÇÑ ¸í) ÆäÀÌÁöÀÔ´Ï´Ù. ¹İ°©½À´Ï´Ù!')
-</script>
-
-<style>
-body {
-	background: pink;
-}
-
-.t1 {
-	background: grey;
-	width: 150px;
-	text-align: center;
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+body { /* ì»¨íŠ¸ë¡¤ + / - ìë™ì£¼ì„, íƒœê·¸ì„ íƒ! */
+	background: #037BFC;
 }
 
 button {
+	background: #18DE02;
+}
+
+.t1 { /* .ì€ í´ë˜ìŠ¤ ì„ íƒ!, ì—¬ëŸ¬ê°œì„ íƒ!  */
 	background: yellow;
-}
-
-#b1 { /* #Àº ¾ÆÀÌµğ ¼±ÅÃ!, Æ¯Á¤ÇÑ °Í ÇÑ °³¸¸ ¼±ÅÃ! */
-	color: red;
-}
-
-#b2 {
-	color: blue;
+	width: 150px;
+	text-align: center;
 }
 </style>
 </head>
 <body>
-	<h3>È¸¿ø°Ë»ö(ÇÑ ¸í) È­¸éÀÔ´Ï´Ù.</h3>
-	<hr color="red">
-	<a href="member.html">
-		<button id="b1">Ã¹ÆäÀÌÁö·Î</button>
+	<h3>ê°œì¸ì •ë³´ ê²€ìƒ‰(ìƒì„¸) í˜ì´ì§€</h3>
+	<hr>
+	<a href="bbs.html">
+		<button id="b1">ì²«í˜ì´ì§€ë¡œ</button>
 	</a>
-	<!-- ÅÂ±×(tag) : htmlÀÇ ÁÖ¿ä ±¸¼º¿ä¼Ò(Element) -->
-	<!-- formÀÇ actionÀº ¹«Á¶°Ç jspÆÄÀÏÀÌ µÇ¾î¾ß¸¸ ÇÔ. -->
-	<form action="memberInsert.jsp">
-		<table border="1">
+<hr>
+<!--aíƒœê·¸ëŠ” ë¬´ì¡°ê±´ getë°©ì‹ ìš”ì²­ -->
+<a href="http://localhost:8898/web00/memberOne.jsp?id=apple1">
+	<button style="background: pink">apple1</button>
+</a>
+<a href="http://localhost:8898/web00/memberOne.jsp?id=apple2">
+	<button style="background: pink">apple2</button>
+</a>
+<a href="http://localhost:8898/web00/memberOne.jsp?id=apple3">
+	<button style="background: pink">apple3</button>
+</a>
+<hr>
+
+<form action="memberOne.jsp" method="get">
+<table border="1">
 			<tr>
-				<td class="t1">ID :</td>
-				<td><input name='id'></td>
+				<td class="t1">ê²€ìƒ‰í•  ì•„ì´ë”” :</td>
+				<td><input name="id"></td>
 			</tr>
-			<!-- <tr>
-				<td class="t1">PW :</td>
-				<td><input name='pw'></td>
-			</tr> -->
 			<tr>
-				<td class="t1">NAME :</td>
-				<td><input name='name'></td>
-			</tr>
-			<tr>
-				<td class="t1">TEL :</td>
-				<td><input name='tel'></td>
-			</tr>
-			<tr>
-				<td colspan="2" class="t1"><button type="submit" id="b2">
-				È¸¿ø°Ë»ö µ¥ÀÌÅÍ
-						Àü¼Û</button></td>
+				<td colspan="2" class="t1">
+					<button id="b2">ê²€ìƒ‰í•  ID ë°ì´í„° ì „ì†¡</button>
+				</td>
 			</tr>
 		</table>
-		<!-- ÀÔ·ÂÇÑ °ªµéÀÌ ¼­¹ö(ÅèÅ¶)À¸·Î Àü´Ş µÉ ¶§´Â formÅÂ±× ¾È¿¡ ÀÖ¾î¾ß ÇÔ. -->
-		<!-- º¸Ãæ³»¿ë : <input name="data"> -->
-	</form>
+</form>
+
 </body>
 </html>
