@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	function signin(){
+		idTag = document.getElementById("user")
+		idValue = idTag.value 
+		
+		resultTag = document.getElementById("result")
+
+		if(idValue.length >= 5){
+			//alert('가입 성공')
+			resultTag.innerHTML = '<img src=img/yes.jpg width=300 height=200>'
+		}else{
+			//alert('가입 실패')
+			resultTag.innerHTML = '<img src=img/no.jpg width=300 height=200>'
+		}
+	
+}
+
+</script>
+
+</head>
+<body>
+	 가입 할 아이디 입력 (5자 이상) :
+	<input id='user' value='root'>
+	<br> 패스워드 입력 :
+	<input id='pw' value='1234'>
+	<br>
+	<button onclick="signin()">가입</button>
+	
+	<div id="result" style="color:red; background: yellow; width: 500px; height: 50px; font-size: 30px">결과창</div>
+</html>
